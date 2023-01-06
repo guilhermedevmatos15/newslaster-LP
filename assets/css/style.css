@@ -1,0 +1,330 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+/* 300 [...] 800 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root {
+    --cor01: #9B06CE;
+    --cor02: #840EC9;
+    --corPreta: #222222;
+
+    --font-padrao: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--corPreta);
+    color: white;
+}
+
+header {
+    width: 100%;
+    padding: 30px 50px 0px 70px;
+    display: flex;
+    justify-content: space-between;
+}
+header > .logo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header > .logo > p {
+    font-family: var(--font-padrao);
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0px;
+    line-height: 1.2em;
+}
+header > nav {
+    /* min-width: 600px; */
+    width: 45%;
+}
+header > nav > ul {
+    width: 100%;
+    height: 100%;
+    padding: 0px 20px;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+}
+/* header > nav > ul.menu {
+    
+} */
+header > nav > ul > li {
+    padding: 8px;
+}
+header > nav > ul > li > a {
+    width: 100%;
+    text-decoration: none;
+    font-family: var(--font-padrao);
+    font-size: 0.98em;
+    color: white;
+}
+/* header > nav > ul > li:last-child {
+    width: 125px;
+    padding: 6px 10px;
+    border: 2px solid var(--cor01);
+    border-radius: 10px;
+} */
+header > nav > ul > li:hover {
+    font-size: 1em;
+    transform: scale(1.1);
+    background-color: #840EC9;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+header > nav > ul > button{
+    width: 125px;
+    min-width: 125px;
+    padding: 6px 10px;
+    border: 2px solid var(--cor01);
+    background-color: transparent;
+    color: white;
+    font-family: var(--font-padrao);
+    font-size: 0.98em;
+    border-radius: 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+header > nav > ul > button:hover {
+    transform: scale(1.1);
+    background-color: #840EC9;
+    color: white;
+    font-size: 1em;
+    transition: .3s;
+}
+
+main {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main > section {
+    width: 50%;
+}
+main > .conteudo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 100px;
+}
+main > .conteudo > h1 {
+    margin-top: 90px;
+    font-size: 3.5em;
+    font-family: var(--font-padrao);
+    color: white;
+    line-height: 1.14em;
+}
+main > .conteudo > h1::first-line {
+    color: var(--cor01);
+}
+main > .conteudo > p {
+    margin: 20px 0px 30px 0px;
+    width: 90%;
+    font-family: var(--font-padrao);
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+main > .conteudo .form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+main > .conteudo .form > input {
+    height: 3.5em;
+    padding: 0px 20px;
+    font-family: var(--font-padrao);
+    border-radius: 14px;
+    border: none;
+}
+main > .conteudo .form > input:focus {
+    outline: none;
+}
+main > .conteudo .form > button {
+    background-color: var(--cor01);
+    color: white;
+    word-spacing: 0.3em;
+    cursor: pointer;
+    height: 3.5em;
+    font-family: var(--font-padrao);
+    border-radius: 14px;
+    border: none;
+}
+main .conteudo .form > button > a {
+    color: white;
+    text-decoration: none;
+}
+
+main > .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main > .image > img {
+    width: 80%;
+}
+
+
+
+div.menu {
+    display: none;
+}
+header > nav > .fa-bars {
+    display: none;
+}
+div.menu.active {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    padding: 15px;
+    /* position: absolute;
+    top: 102px; */
+    background-color: rgb(56, 56, 56);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+div.menu > p,a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-padrao);
+}
+div.menu > button {
+    width: 200px;
+    padding: 6px 10px;
+    border: 2px solid var(--cor01);
+    background-color: transparent;
+    color: white;
+    font-family: var(--font-padrao);
+    font-size: 0.98em;
+    border-radius: 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+div.menu > p:hover {
+    transform: scale(1.1);
+}
+div.menu > button:hover {
+    background-color: #840EC9;
+    color: white;
+    font-size: 1em;
+    transition: .3s;
+}
+div.menu hr {
+    width: 40%;
+}
+
+
+
+
+
+/* Media queries */
+@media (max-width: 1480px) {
+    /* body {
+        height: 120vh;
+    } */
+    header {
+        padding: 30px 0px 0px 50px;
+        justify-content: space-between;
+    }
+    header > nav > ul {
+        gap: 30px;
+    }
+    header > nav > ul > li:hover {
+        font-size: 1em;
+    }
+    div.logo {
+        width: 40%;
+    }
+}
+@media (max-width: 1200px) {
+    main > .conteudo .form {
+        width: 80%;
+    }
+    main > .conteudo {
+        padding-left: 60px;
+    }
+}
+@media (max-width: 1000px) {
+    main > .conteudo > h1 {
+        margin-top: 60px;
+        font-size: 2.8em;
+    }
+    main > .image > img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 860px) {
+    /* header {
+        position: relative;
+    } */
+    header > nav > ul {
+        display: none;
+    }
+    header > nav {
+        padding-right: 50px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    header > nav > .fa-bars {
+        display: block;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    header > nav > .fa-bars:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 760px) {
+    section.image {
+        display: none;
+    }
+    section.conteudo {
+        width: 80%;
+    }
+}
+@media (max-width: 612px) {
+    section.conteudo {
+        width: 90%;
+    }
+}
+@media (max-width: 445px) {
+    header {
+        padding-left: 30px;
+    }
+    section.conteudo {
+        padding: 0 10px 0 10px;
+        text-align: center;
+    }
+    section.conteudo h1 {
+        font-size: 2.6em;
+    }
+    section.conteudo p {
+        font-size: 0.8em;
+    }
+    section.conteudo form {
+        margin: auto;
+    }
+}
